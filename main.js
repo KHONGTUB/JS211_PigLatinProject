@@ -13,7 +13,48 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
+  word = word.toLowerCase()
+  word = word.trim()
+
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+
+  if(vowels.includes(word[0]))
+  {
+    return word + 'yay'
+  }
+  else
+  {
+    return checkWhereVowels(word, vowels)
+  }
+
   // Your code here
+
+}
+
+const checkWhereVowels = (word, vowels) => {
+  let nonvowels = ''
+  let pig = ''
+  for(let i = 0 ; i < word.length; i++)
+  {
+    console.log(word[i])
+    nonvowels = nonvowels + word[0]
+    word = word.substring(1)
+
+    console.log(word)
+
+    if(vowels.includes(word[i]))
+    {
+  
+
+      console.log("entered if")
+      pig = word + nonvowels + "ay"
+
+      return pig
+      
+    }
+
+    
+  }
 
 }
 
