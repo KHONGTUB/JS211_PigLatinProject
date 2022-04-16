@@ -33,26 +33,17 @@ const pigLatin = (word) => {
 
 const checkWhereVowels = (word, vowels) => {
   let nonvowels = ''
-  let pig = ''
-  for(let i = 0 ; i < word.length; i++)
+  for(let i = 0 ; i <= word.length; i++)
   {
-    console.log(word[i])
     nonvowels = nonvowels + word[0]
     word = word.substring(1)
 
-    console.log(word)
-
-    if(vowels.includes(word[i]))
+    if(vowels.includes(word[0]))
     {
   
-
-      console.log("entered if")
-      pig = word + nonvowels + "ay"
-
-      return pig
+      return word + nonvowels + "ay"
       
     }
-
     
   }
 
